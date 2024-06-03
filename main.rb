@@ -1,14 +1,40 @@
 require_relative 'maquina-turing-universal'
 require_relative 'mt-anbncn'
+require_relative 'mt-anbn'
+require_relative 'mt-multiplicacao'
 
-# Chame o método linker e codificacao_cadeia para definir a variável entrada
-entrada = MtKuroda.linker + "$" + MtKuroda.codificacao_cadeia
+puts "====================================================================="
 
+entrada = MtCodificada.linker + '$' + MtCodificada.codificacao_cadeia
 mt = MTU.new
 
 puts "Entrada:\n #{entrada}"
 puts "Decidiu? #{mt.processar(entrada)}"
-puts "Fita Resultante:\n #{mt.fita_com_marca}"
+puts "Fita Resultante:\n #{mt.fita}"
+puts "Cursor parou em #{mt.cursor}"
+puts "Cursor no estado #{mt.estado}"
+puts "Cursor está lendo \"#{mt.fita[mt.cursor]}\""
+
+puts "====================================================================="
+
+entrada = MtKuroda.linker + '$' + MtKuroda.codificacao_cadeia
+mt = MTU.new
+
+puts "Entrada:\n #{entrada}"
+puts "Decidiu? #{mt.processar(entrada)}"
+puts "Fita Resultante:\n #{mt.fita}"
+puts "Cursor parou em #{mt.cursor}"
+puts "Cursor no estado #{mt.estado}"
+puts "Cursor está lendo \"#{mt.fita[mt.cursor]}\""
+
+puts "====================================================================="
+
+entrada = MtMultiplicacao.linker + '$' + MtMultiplicacao.codificacao_cadeia
+mt = MTU.new
+
+puts "Entrada:\n #{entrada}"
+puts "Decidiu? #{mt.processar(entrada)}"
+puts "Fita Resultante:\n #{mt.fita}"
 puts "Cursor parou em #{mt.cursor}"
 puts "Cursor no estado #{mt.estado}"
 puts "Cursor está lendo \"#{mt.fita[mt.cursor]}\""

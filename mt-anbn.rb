@@ -37,6 +37,6 @@ module MtCodificada
 
   # Método para retornar a codificação da cadeia inicial aabb
   def self.codificacao_cadeia
-    "#{@a}#{@a}#{@b}#{@b}"
+    "#{@a}#{@a}#{@a}#{@b}#{@b}#{@b}"
   end
 end

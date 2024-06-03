@@ -59,6 +59,6 @@ module MtKuroda
 
   # Método para retornar a codificação da cadeia inicial aaabbbccc
   def self.codificacao_cadeia
-    "#{@a}#{@a}#{@a}#{@b}#{@b}#{@c}#{@c}"
+    "#{@a}#{@a}#{@a}#{@b}#{@b}#{@b}#{@c}#{@c}#{@c}"
   end
 end
